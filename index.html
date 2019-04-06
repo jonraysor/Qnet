@@ -6,55 +6,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<!-- ^ what is this for popper.js -->
-<link rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
+<script src="example.js"></script>
 </head>
 
-<style>
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-</style>
 <body>
-  asasdasd
-<header class="header">
-<nav class="navbar">
-    <div class="container">
-      <a class="navbar-logo" href="index.html">
-      <img src="logo.png" alt="" />
-    </div>
-    <div>
+<div class="app">
+  <div class="header mt-5">
+    <a class="bar-logo" href="index.html">
+      <img src="logo.png" alt="Qnet_Logo" />
+    </a>
+		<div class="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
+		</div>
+    <div class="search-container" style="position: relative;">
+      <input class="mr-1" type="text" placeholder="Search the school" name="search">
+      <img src="search-icon.svg" onclick="alert('ok')">
     </div>
-</nav>
-</header>
-<content>
-  <div class="goal">
-    <input type="text" placeholder="Search School..">
   </div>
-</content>
-<footer>
-</footer>
+  <!-- <content>
+    <div class="goal">
+      <input type="text" placeholder="Search School..">
+    </div>
+  </content> -->
+
+
+  <!-- <footer class="footer-area">
+
+
+  </footer> -->
+</div>
 </body>
 </html>
