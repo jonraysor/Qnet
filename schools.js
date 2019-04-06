@@ -42,9 +42,22 @@
 }
 
 async function initDropdowns() {
-  let json = await loadJson('school.json')
+  let json = await loadJson('/Schools.json')
   let data = JSON.parse(json)
   this.data = data
   setSchoolsDropdown()
-  enableDropdown('schools')
+  enableDropdown('schoolsBar')
+}
+
+function setSchoolsDropdown() {
+  setDropdowns('schoolsBar', Object.keys(this.data.allSchools).map(s => {
+    return {
+      name: s,
+      value: s,
+    }
+  }))
+}
+
+function enableDropdown(id) {
+  document.querySelector(`#${id}`).removeAttribute('disabled')
 }
