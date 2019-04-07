@@ -19,7 +19,7 @@
 
 
 document.addEventListener("click", (e) => {
-  closeAllLists(e.target)
+  // closeAllLists(e.target)
 })
 
 var data = ["Community College of the Air Force",
@@ -53,11 +53,14 @@ async function loadJson(url) {
 }
 
 async function initDropdowns() {
-  let json = await loadJson('/schools.json')
+  let json = await loadJson('/Schools.json')
   let data = JSON.parse(json)
   this.data = data
+  console.log(data)
 }
 
-autocomplete(document.getElementById("schoolsBar"), data);
+initDropdowns()
+
+// autocomplete(document.getElementById("schoolsBar"), data);
 
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete
