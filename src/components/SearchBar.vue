@@ -49,6 +49,7 @@ export default {
   },
   watch: {
     text() {
+      this.tmptext = null
       this.$emit('update', this.text)
     }
   },
@@ -56,11 +57,12 @@ export default {
     disableSuggestions() {
       this.showSuggestions = false;
       // console.log('hide')
-      if (this.tmptext) {
+      if (this.tmptext != null && this.tmptext !== '') {
         this.text = this.tmptext
       }
     },
     enableSuggestions() {
+      this.tmptext = null
       this.showSuggestions = true;
       // console.log('show')
     },

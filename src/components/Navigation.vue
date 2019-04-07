@@ -37,8 +37,8 @@ export default {
   flex-direction: column;
 
   .bar-logo > img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
 
   .navbar {
