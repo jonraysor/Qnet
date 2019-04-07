@@ -14,9 +14,20 @@
 
   console.log(database)
 
+*/
 
-  */
-  async function loadJson(url) {
+
+
+document.addEventListener("click", (e) => {
+  closeAllLists(e.target)
+})
+
+var data = ["Community College of the Air Force",
+"Alabama A & M University" ,"University of Alabama at Birmingham",
+"ALABAMA AVIATION AND TECHNICAL COLLEGE", "Amridge University", "University of Alabama in Huntsville"
+];
+
+async function loadJson(url) {
   return new Promise(function (resolve, reject) {
     let xhr = new XMLHttpRequest()
     xhr.overrideMimeType('application/json')
@@ -42,22 +53,11 @@
 }
 
 async function initDropdowns() {
-  let json = await loadJson('/Schools.json')
+  let json = await loadJson('/schools.json')
   let data = JSON.parse(json)
   this.data = data
-  setSchoolsDropdown()
-  enableDropdown('schoolsBar')
 }
 
-function setSchoolsDropdown() {
-  setDropdowns('schoolsBar', Object.keys(this.data.allSchools).map(s => {
-    return {
-      name: s,
-      value: s,
-    }
-  }))
-}
+autocomplete(document.getElementById("schoolsBar"), data);
 
-function enableDropdown(id) {
-  document.querySelector(`#${id}`).removeAttribute('disabled')
-}
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete

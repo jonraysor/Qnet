@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="stylesheet.scss">
 <script src="schools.js"></script>
 </head>
 
@@ -18,18 +19,21 @@
     </a>
 		<div class="navbar">
       <a href="index.html" class="active">Home</a>
-      <a href="contacts.html">About</a>
-      <a href="#contact">Contact</a>
+      <a href="About.html" class="active">About</a>
+      <a href="Contacts.html" class="active">Contact</a>
 		</div>
-    <div class="search-container mb-5" style="position: relative;">
-      <input id="schoolsBar" class="mr-1" type="text" placeholder="Search the school" name="search">
+
+    <div class="search-container mb-5" style="position: relative;"  autocomplete="off" action="/action_page.php">
+      <input id="schoolsBar" class="mr-1" type="text" placeholder="Search the school" name="search" >
 			<input id="classBar" class="mr-1" type="text" placeholder="Search the class" name="search">
 			<img src="search-icon.svg" onclick="alert(schoolsBar.value)">
     </div>
 
+
     <div class="text">
+
     <p><kbd>Find all your class quiz and test questions here.....</kbd></div>
-    </div>
+
 
   </div>
   <!-- <content>
