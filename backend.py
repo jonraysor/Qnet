@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask, jsonify, request
 import pandas
 
 app = Flask(__name__)
@@ -64,7 +64,16 @@ def editDistance(str1, str2, i, j):
 
     return ans
 
-
-
+@app.route('/writeToSchools')
+def writeToSchools():
+    name = request.args.get('name')
+    if __schools is None:
+        return "-1"
+    if name not in __schools:
+        return "1"
+    #     with open('readInSchools.json') as outfile:
+    #         json.dump(name, outfile)
+    #     return name
+    return name
 
 app.run()
