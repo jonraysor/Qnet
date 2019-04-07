@@ -87,7 +87,7 @@ export default {
   }
   .list {
     overflow-y: scroll;
-    max-height: 200px;
+    max-height: 100px;
     height: auto;
     width: 100%;
     position: absolute;
