@@ -25,6 +25,19 @@
   cursor: pointer;
 }
 
+.nav-item {
+text-decoration: none;
+color: black;
+}
+
+.active {
+	color: blue;
+}
+
+.nav-item:hover {
+	text-decoration: underline;
+}
+
 </style>
 <body>
 
@@ -43,9 +56,9 @@
 			</div>
 
 <div>
-		<a href="index.html" class="active">Home</a>
- <a href="#about">About</a>
- <a href="#contact">Contact</a>
+		<a href="index.html" class="active nav-item">Home</a>
+ <a href="#about" class="nav-item">About</a>
+ <a href="#contact" class="nav-item">Contact</a>
  <div class="search-container">
 	 <form action="/action_page.php">
 		 <input type="text" placeholder="Search.." name="search">
